@@ -10,8 +10,19 @@
 // "1405" --> 1405
 // "-7" --> -7
 
+// Solution 1
 const stringToNumber = function(str) {
     return Number(str)
+}
+
+// Solution 2
+function stringToNumber(str) {
+    return parseInt(str)
+}
+
+// Solution 3
+function stringToNumber(str) {
+    return +str
 }
 
 console.log(stringToNumber("1234")) // 1234
