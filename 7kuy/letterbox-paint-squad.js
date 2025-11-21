@@ -34,17 +34,20 @@
 // 0 < start <= end
 
 const paintLetterboxes = function(start, end) {
-    // loop throught number and then create big array with all the number
-    let bigArray = []
+    let array = []
     for(let i = start; i <= end; i++) {
-        bigArray.push(i.split(''))
+        array.push(String(i).split(''))
     }
-    console.log(bigArray)
+    
+    const bigArray = array.flat().map(e => +e)
 
-    // then loop again for 0 to 9
-    // and for each number found push it to the end result in an array
+    let result = []
 
+    for(let j = 0; j <= 9; j++) {
+        result.push(bigArray.filter(e => e === j).length)
+    } 
 
+    return result
 }
 
 console.log(paintLetterboxes(125, 132)) // [1,9,6,3,0,1,1,1,1,1]
