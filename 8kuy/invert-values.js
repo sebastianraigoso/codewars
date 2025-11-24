@@ -6,6 +6,12 @@
 // [] --> []
 // You can assume that all values are integers. Do not mutate the input array.
 
+// Solution 1
 function invert(array) {
     return array.map(e => e * -1)
+}
+
+// Solution 2
+function invert(array) {
+    return array.map(e => -e)
 }
