@@ -12,12 +12,26 @@
 // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
 // Note: For 4 or more names, the number in "and 2 others" simply increases.
 
+// Solution 1
 function likes(names) {
     return names.length === 0 ? 'no one likes this' :
            names.length === 1 ? `${names[0]} likes this` :
            names.length === 2 ? `${names[0]} and ${names[1]} like this` :
            names.length === 3 ? `${names[0]}, ${names[1]} and ${names[2]} like this` :
            `${names[0]}, ${names[1]} and ${names.length - 2} others like this` 
+}
+
+// Solution 2
+function likes(names) {
+    names.length === 0 && (names = ["no one"])
+    let [a, b, c, ...others] = names
+
+    switch (names.length) {
+      case 1: return `${a} likes this`
+      case 2: return `${a} and ${b} like this`
+      case 3: return `${a}, ${b} and ${c} like this`
+      default: return `${a}, ${b} and ${others.length + 1} others like this`
+    }
 }
 
 console.log(likes([])) // 'no one likes this'
