@@ -11,7 +11,6 @@
 function spinWords(string) {
     const strSplit = string.split(' ')
     return strSplit.map(e => e.length >= 5 ? e.split('').reverse().join('') : e).join(' ')
-
 }
 
 console.log(spinWords("Welcome")) // "emocleW"
