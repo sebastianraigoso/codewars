@@ -3,8 +3,14 @@
 
 // Note: input will never be an empty string
 
+// Solution 1
 function fakeBin(x) {
-    return [...String(x)].map(e => e < 5 ? '0' : '1').join('')
+    return [...x].map(e => Number(e) < 5 ? '0' : '1').join('') // number comparaison
+}
+
+// Solution 2
+function fakeBin(x) {
+    return [...x].map(e => Number(e) < '5' ? '0' : '1').join('') // string comparaison
 }
 
 console.log(fakeBin('45385593107843568')) // '01011110001100111'
