@@ -7,8 +7,7 @@
 function bmi(weight, height) {
     return (weight / height ** 2) <= 18.5 ? 'Underweight' :
            (weight / height ** 2) <= 25.0 ? 'Normal' :
-           (weight / height ** 2) <= 30.0 ? 'Overweight' :
-           'Obese'
+           (weight / height ** 2) <= 30.0 ? 'Overweight' : 'Obese'
 }
 
 console.log(bmi(50, 1.80)) // "Underweight", "For weight = 50 and height = 1.80"
