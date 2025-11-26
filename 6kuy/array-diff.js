@@ -7,7 +7,6 @@
 // If a = [1, 2, 2, 2, 3] and b = [2], the result should be [1, 3].
 
 function arrayDiff(a, b) {
-    b = String(b)
     return a.filter(e => !b.includes(e))
 }
 
