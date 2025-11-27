@@ -2,6 +2,7 @@
 
 // Example : n=5 --> [5,4,3,2,1]
 
+// Solution 1
 const reverseSeq = n => {
     let reverseArr = []
     for(let i = n; i > 0; i--) {
@@ -9,5 +10,8 @@ const reverseSeq = n => {
     }
     return reverseArr
 }
+
+// Solution 2
+const reverseSeq = n => Array.from({length: n}, (_, i) => n - i)
 
 console.log(reverseSeq(5)) // [5, 4, 3, 2, 1]
