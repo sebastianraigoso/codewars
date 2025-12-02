@@ -10,11 +10,17 @@
 // 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
 // 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
 
+// Solution 1
 function digitalRoot(n) {
     while(String(n).length > 1) {
         n = [...String(n)].reduce((a,c) => +a + +c, 0)
     }
     return n
+}
+
+// Solution 2
+function digital_root(n) {
+    return n < 10 ? n : digital_root(String(n).split('').reduce((s,v)=>Number(s)+Number(v)))
 }
 
 console.log(digitalRoot(16)) // 7
