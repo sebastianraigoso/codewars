@@ -9,10 +9,14 @@
 // a = "abcdefghijklmnopqrstuvwxyz"
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
+// Solution 1
 function longest(s1, s2) {
     let concat = new Set(s1.concat(s2))
     return [...concat].sort().join('')
 }
+
+// Solution 2
+const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
 
 console.log(longest("aretheyhere", "yestheyarehere")) // "aehrsty"
 console.log(longest("loopingisfunbutdangerous", "lessdangerousthancoding")) // "abcdefghilnoprstu"
