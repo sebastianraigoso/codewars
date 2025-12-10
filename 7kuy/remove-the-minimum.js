@@ -13,13 +13,25 @@
 // * Input: [5,3,2,1,4], output = [5,3,2,4]
 // * Input: [2,2,1,2,1], output = [2,2,2,1]
 
+// Solution 1
 function removeSmallest(numbers) {
     if(numbers.length === 0) return []
 
     const min = Math.min(...numbers)
     const index = numbers.indexOf(min)
 
-    return numbers.filter((_, i) => i !== index)
+    return nu
+    
+    numbers.filter((_, i) => i !== index)
+}
+
+// Solution 2
+function removeSmallest(numbers) {
+    let copy = [...numbers]
+    let smallest = Math.min(...numbers)
+    let smallestIdx = numbers.indexOf(smallest)
+    copy.splice(smallestIdx, 1)
+    return copy
 }
 
 console.log(removeSmallest([1, 2, 3, 4, 5])) // [2, 3, 4, 5]
