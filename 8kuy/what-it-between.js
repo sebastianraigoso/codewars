@@ -6,3 +6,10 @@
 // b = 4
 // --> [1, 2, 3, 4]
 
+function between(a, b) {
+    let between = []
+    for(let i = a; i <= b; i++) {
+        between.push(i)
+    }
+    return between
+}
