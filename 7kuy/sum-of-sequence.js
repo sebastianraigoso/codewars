@@ -12,14 +12,10 @@
 // 1,5,3  --> 5 (1 + 4)
 
 const sequenceSum = (begin, end, step) => {
-    if(begin < end) {
-        let result = 0
-        while(begin <= end) {
-            result += begin
-            begin += step
-        }
-        return result
-    } else {
-        return 0
+    let result = 0
+    while(begin <= end) {
+        result += begin
+        begin += step
     }
+    return result
 }
