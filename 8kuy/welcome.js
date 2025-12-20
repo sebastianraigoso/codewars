@@ -31,8 +31,14 @@ const welcome = {
 , "welsh": "Croeso"
 }
 
+// Solution 1
 function greet(language) {
     return welcome.hasOwnProperty(language) ? welcome[language] : 'Welcome'
+}
+
+// Solution 2
+function greet(language) {
+    return welcome[language] || 'Welcome'
 }
 
 console.log(greet('english')) // 'Welcome'
