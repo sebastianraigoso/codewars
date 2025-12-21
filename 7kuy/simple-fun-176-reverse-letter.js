@@ -12,7 +12,7 @@
 // [output] a string
 
 function reverseLetter(str) {
-    const num = 'abcdefghijklmnopqrstuvwxyz'
+    const num = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
     return [...str].filter(e => num.includes(e)).reverse().join('')
 }
 
