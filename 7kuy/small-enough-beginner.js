@@ -5,6 +5,12 @@
 
 // You can assume all values in the array are numbers.
 
+// Solution 1
 function smallEnough(a, limit) {
     return a.every(e => e <= limit)
+}
+
+// Solution 2
+function smallEnough(a, limit){
+  return Math.max(...a) <= limit
 }
