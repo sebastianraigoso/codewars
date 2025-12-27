@@ -10,6 +10,7 @@
 
 // The size will always be positive and will only use whole numbers.
 
+// Solution 1
 function stringy(size) {
     let result = []
     for(let i = 1; i <= size; i++) {
@@ -22,6 +23,8 @@ function stringy(size) {
     return result.join('')
 }
 
-console.log(stringy(12)) // '101010101010'
+// Solution 2
+const stringy = x => ''.padStart(x, '10')
 
-// array and fill
+
+console.log(stringy(12)) // '101010101010'
