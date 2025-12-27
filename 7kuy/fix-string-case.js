@@ -8,6 +8,7 @@
 // solve("CODe") = "CODE". Uppercase characters > lowercase. Change only the "e" to uppercase.
 // solve("coDE") = "code". Upper == lowercase. Change all to lowercase.
 
+// Solution 1
 function solve(s) {
     let upper = 0
     let lower = 0   
@@ -25,6 +26,16 @@ function solve(s) {
     return upper > lower ? s.toUpperCase() : s.toLowerCase()
 }
 
+// Solution 2
+function solve(s){
+  const symbArr = s.split('');
+  const upperCase = symbArr.filter(char => char === char.toUpperCase()).length;
+  const lowerCase = symbArr.filter(char => char === char.toLowerCase()).length;
+  
+  return upperCase > lowerCase
+    ? s.toUpperCase()
+    : s.toLowerCase();
+}
   
 console.log(solve("CODe")) // "CODE"
 console.log(solve("COde")) // "code"
