@@ -10,6 +10,7 @@
 // Notes
 // The input array will always contain only positive numbers, and will never be empty or null.
 
+// Solution 1
 function squareOrSquareRoot(array) {
     return array.map(e => Number.isInteger(Math.sqrt(e)) ? Math.sqrt(e) : Math.pow(e, 2))
 }
