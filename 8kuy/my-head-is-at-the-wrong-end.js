@@ -7,8 +7,14 @@
 
 // Same goes for all the other arrays/lists that you will get in the tests: you have to change the element positions with the same exact logics.
 
+// Solution 1
 function fixTheMeerkat(arr) {
     return [arr[2], arr[1], arr[0]]
+}
+
+// Solution 2
+function fixTheMeerkat(arr) {
+    return arr.reverse()
 }
 
 console.log(fixTheMeerkat(["tail", "body", "head"])) // ["head", "body", "tail"]
