@@ -11,7 +11,6 @@ function inAscOrder(n) {
     return ascending.join('') === n.join('')
 }
 
-
 console.log(inAscOrder([1,2,4,7,19])) // true
 console.log(inAscOrder([1,2,3,4,5])) // true
 console.log(inAscOrder([1,6,10,18,2,4,20])) // false
