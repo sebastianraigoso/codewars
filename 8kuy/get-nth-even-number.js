@@ -8,3 +8,6 @@
 // 1298734 --> 2597466
 // The input will not be 0.
 
+function nthEven(n) {
+    return 2 * (n -1)
+}
