@@ -5,6 +5,7 @@
 // Given an array of positive integers (the weights of the people), return a new array of two integers, whereby the first one is the total weight of team 1, and the second one is the total weight of team 2.
 // Note that the array will never be empty.
 
+// Solution 1
 function rowWeights(array) {
     let team1 = []
     let team2 = []
@@ -18,6 +19,17 @@ function rowWeights(array) {
     }
     return [team1.reduce((acc, curr) => acc + curr, 0), team2.reduce((acc, curr) => acc + curr, 0)]
 }
+
+// Solution 2
+function rowWeights(array){
+    let t1 = array.filter((x, i)=>i%2==0).reduce((a,item)=>a+item,0)
+    let t2 = array.filter((x, i)=>i%2!=0).reduce((a,item)=>a+item,0)
+  
+    return [t1, t2]
+}
+
+// Solution 3 (faster)
+const rowWeights = arr => arr.reduce((a, b, i)=> (a[i % 2] += b,a), [0,0])
 
 console.log(rowWeights([80])) // [80,0]
 console.log(rowWeights([100,50])) // [100,50]
