@@ -1,0 +1,29 @@
+// Several people are standing in a row divided into two teams. 
+// The first person goes into team 1, the second goes into team 2, the third goes into team 1, and so on.
+
+// Task
+// Given an array of positive integers (the weights of the people), return a new array of two integers, whereby the first one is the total weight of team 1, and the second one is the total weight of team 2.
+// Note that the array will never be empty.
+
+function rowWeights(array) {
+    let team1 = []
+    let team2 = []
+
+    for(let i = 0; i < array.length; i++) {
+        if(i % 2 === 0) {
+            team1.push(array[i])
+        } else {
+            team2.push(array[i])
+        }
+    }
+    return [team1.reduce((acc, curr) => acc + curr, 0), team2.reduce((acc, curr) => acc + curr, 0)]
+}
+
+console.log(rowWeights([80])) // [80,0]
+console.log(rowWeights([100,50])) // [100,50]
+console.log(rowWeights([50,60,70,80])) // [120,140]
+console.log(rowWeights([13,27,49])) // [62,27]
+console.log(rowWeights([70,58,75,34,91])) // [236,92]
+console.log(rowWeights([29,83,67,53,19,28,96])) // [211,164]
+console.log(rowWeights([100,51,50,100])) // [150,151]
+console.log(rowWeights([39,84,74,18,59,72,35,61])) // [207,235]
