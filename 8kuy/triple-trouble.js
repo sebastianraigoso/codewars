@@ -6,6 +6,7 @@
 
 // Note: You can expect all of the inputs to be the same length.
 
+// Solution 1
 function tripleTrouble(one, two, three) {
     let arr = [one, two, three]
     let result = ''
@@ -14,6 +15,9 @@ function tripleTrouble(one, two, three) {
     }
     return result
 }
+
+// Solution 2
+const tripleTrouble = (one, two, three) => one.split("").map((letter, index) => letter + two[index] + three[index]).join("")
 
 console.log(tripleTrouble("aaa","bbb","ccc")) // "abcabcabc"
 console.log(tripleTrouble("aaaaaa","bbbbbb","cccccc")) // "abcabcabcabcabcabc"
