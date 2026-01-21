@@ -8,7 +8,6 @@
 // If this one is an alligator (case-insensitive) return small otherwise return wide.
 
 function mouthSize(animal) {
-    
     return animal.toLowerCase() === 'alligator' ? 'small' : 'wide'
 }
 
