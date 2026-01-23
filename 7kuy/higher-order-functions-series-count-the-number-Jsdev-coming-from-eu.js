@@ -20,6 +20,7 @@
 // The format of the strings will always be Europe and JavaScript.
 // All data will always be valid and uniform as in the example above.
 
+// Solution 1
 function countDevelopers(list) {
     let count = 0
     for (let dev of list) {
@@ -28,4 +29,9 @@ function countDevelopers(list) {
         }
     }
     return count
+}
+
+// Solution 2
+function countDevelopers(list) {
+    return list.filter(e => e.continent === 'Europe' && x.language ==='JavaScript').length
 }
