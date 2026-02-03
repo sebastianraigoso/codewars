@@ -13,6 +13,7 @@
 // Make sure you cover the cases where certain words do not show up with correct capitalization. 
 // For example, the input "pOLitiCIaN" should still return "Your tax dollars".
 
+// Solution 1
 function getDrinkByProfession(param) {
     switch(param.toLowerCase()) {
         case "jabroni": return "Patron Tequila"
@@ -24,3 +25,15 @@ function getDrinkByProfession(param) {
         default: return "Beer"
     }
 }
+
+// Solution 2
+const drinks = {
+    "jabroni": "Patron Tequila",
+    "school counselor": "Anything with Alcohol",
+    "programmer": "Hipster Craft Beer",
+    "bike gang member": "Moonshine",
+    "politician": "Your tax dollars",
+    "rapper": "Cristal"
+}
+
+const getDrinkByProfession = profession => drinks[profession.toLowerCase()] || "Beer"
