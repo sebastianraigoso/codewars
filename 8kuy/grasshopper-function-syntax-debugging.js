@@ -5,6 +5,12 @@
 //   return verb + noun
 // }
 
+// Solution 1
 function main(verb, noun) {
   return verb + noun
+}
+
+// Solution 2
+const main = (verb, noun) => {
+    return verb + noun
 }
