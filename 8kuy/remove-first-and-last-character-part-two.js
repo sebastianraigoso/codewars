@@ -13,7 +13,13 @@
 // "1"    =>  NULL
 // "1,2"  =>  NULL
 
+// Solution 1
 function array(string) {
   if(string.split(',').length < 3) return null
   return string.split(',').slice(1, -1).join(' ')
+}
+
+// Solution 2
+function array(string) {
+  return string.split(",").slice(1,-1).join(" ") || null
 }
