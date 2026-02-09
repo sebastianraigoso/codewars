@@ -5,7 +5,7 @@
 // All inputs will be valid.
 
 function digits(n) {
-
+    return String(n).length
 }
 
 console.log(digits(0)) // 1
