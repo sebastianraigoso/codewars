@@ -4,10 +4,12 @@
 // Example:
 // With "James" as the first name and "Stevens" as the last name should return "James Stevens"
 
+// Solution 1
 function combineNames(first, last) {
     return first + " " + last
 }
 
+// Solution 2
 const combineNames = (...names) => {
     return names.join(' ')
 }
