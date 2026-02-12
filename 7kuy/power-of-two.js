@@ -13,5 +13,10 @@
 // Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 0 is not a power of 2.
 
 function isPowerOfTwo(n) {
-    
+    return n > 0 && Number.isInteger(Math.log2(n))
 }
+
+
+console.log(isPowerOfTwo(2)) //  true
+console.log(isPowerOfTwo(4096)) // true
+console.log(isPowerOfTwo(5)) // false
