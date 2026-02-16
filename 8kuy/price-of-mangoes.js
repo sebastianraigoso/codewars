@@ -1,4 +1,5 @@
-// Accountant time! For a given quantity and price (per mango), calculate the total cost of the mangoes.
+// Accountant time! 
+// For a given quantity and price (per mango), calculate the total cost of the mangoes.
 // But! Every third mango is free!
 
 // Examples
@@ -25,10 +26,13 @@
 
 // Quantity = 9
 // Price = 5
-// Total cost ==> 30   
+// Total cost ==> 30
 // # Paid 6 mangoes for $5 per unit = $30; +3 mangoes for free
 // # 🥭🥭🆓   🥭🥭🆓   🥭🥭🆓
 
 function mango(quantity, price) {
-    
+    return (quantity - Math.floor(quantity / 3)) * price
 }
+
+console.log(mango(3, 3)) // 6
+console.log(mango(9, 5)) // 30
