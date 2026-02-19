@@ -10,8 +10,14 @@
 // Output
 // Output will be the shortened string, e.g., "Friday May 2".
 
+// Solution 1
 function shortenToDate(longDate) {
     return longDate.replace(',', '').split(' ').slice(0, 3).join(' ')
+}
+
+// Solution 2
+function shortenToDate(longDate) {
+    return longDate.split(',')[0]
 }
 
 console.log(shortenToDate("Friday May 2, 9am")) // "Friday May 2"
