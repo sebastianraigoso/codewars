@@ -1,5 +1,7 @@
 // Santa's senior gift organizer Elf developed a way to represent up to 26 gifts by assigning 
-// a unique alphabetical character to each gift. After each gift was assigned a character, 
+// a unique alphabetical character to each gift. 
+
+// After each gift was assigned a character, 
 // the gift organizer Elf then joined the characters to form the gift ordering code.
 
 // Santa asked his organizer to order the characters in alphabetical order, 
@@ -7,7 +9,7 @@
 // Can you help him out?
 
 // Sort the Gift Code
-// Write a function called sortGiftCode/sort_gift_code/SortGiftCode that accepts a string 
+// Write a function called sortGiftCode that accepts a string 
 // containing up to 26 unique alphabetical characters, 
 // and returns a string containing the same characters in alphabetical order.
 
@@ -17,7 +19,7 @@
 // "zyxwvutsrqponmlkjihgfedcba"  -- => "abcdefghijklmnopqrstuvwxyz"
 
 function sortGiftCode(code) {
-    
+    return [...code].sort().join('')
 }
 
 console.log(sortGiftCode('abcdef')) // 'abcdef'
