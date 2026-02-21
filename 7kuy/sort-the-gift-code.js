@@ -15,3 +15,11 @@
 // "abcdef"                      -- => "abcdef"
 // "pqksuvy"                     -- => "kpqsuvy"
 // "zyxwvutsrqponmlkjihgfedcba"  -- => "abcdefghijklmnopqrstuvwxyz"
+
+function sortGiftCode(code) {
+    
+}
+
+console.log(sortGiftCode('abcdef')) // 'abcdef'
+console.log(sortGiftCode('pqksuvy')) // 'kpqsuvy'
+console.log(sortGiftCode('zyxwvutsrqponmlkjihgfedcba')) // 'abcdefghijklmnopqrstuvwxyz'
