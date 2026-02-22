@@ -3,10 +3,9 @@
 // Two Strings, no validation is needed.
 // Output
 // You must output a string containing the two strings with the word ```' are '```
-// Reference: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/template_strings
 
 const templateStrings = function(noun, adjective) {
-    
+    return `${noun} are ${adjective}`
 }
 
 console.log(templateStrings('Animals', 'Good')) // 'Animals are Good'
