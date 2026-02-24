@@ -8,7 +8,12 @@
 // For test reasons there may be duplicate IDs, but you don't have to find or remove them!
 
 function nextId(ids) {
-
+    for(let i = 0; i < ids.length; i++) {
+        if(!ids.includes(i)) {
+            return i
+        }
+    }
+    return ids.length
 }
 
 console.log(nextId([0,1,2,3,5])) // 4
