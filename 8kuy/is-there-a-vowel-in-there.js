@@ -4,6 +4,7 @@
 
 // input [100,100,116,105,117,121]=>[100,100,116,"i","u",121] output Return the resulting array.
 
+// Solution 1
 function isVow(a) {
     const vowels = 'aeiou'
     let result = []
@@ -16,6 +17,14 @@ function isVow(a) {
         }
     }
     return result
+}
+
+// Solution 2
+function isVow(a) {
+    return a.map(n => {
+        const char = String.fromCharCode(n)
+        return 'aeiou'.includes(char) ? char : n
+    })
 }
 
 console.log(isVow([118,117,120,121,117,98,122,97,120,106,104,116,113,114,113,120,106])) // [118,"u",120,121,"u",98,122,"a",120,106,104,116,113,114,113,120,106]
