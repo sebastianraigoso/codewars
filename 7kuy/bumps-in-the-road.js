@@ -6,5 +6,5 @@
 // If you are able to reach home safely by encountering 15 bumps or less, return Woohoo!, otherwise return Car Dead
 
 function bump(x) {
-
+    return x.split('').filter(e => e === 'n').length > 15 ? 'Car Dead' : 'Woohoo!'
 }
