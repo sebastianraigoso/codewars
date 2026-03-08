@@ -7,6 +7,7 @@
 // 999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2, there are 4 multiplications)
 // 4 --> 0 (because 4 is already a one-digit number, there is no multiplication)
 
+// Solution 1
 function persistence(num) {
     num = String(num)
     let count = 0
@@ -16,6 +17,12 @@ function persistence(num) {
         count++
     }
     return count
+}
+
+// Solution 2
+function persistence(num, cnt=0) {
+    let arrayNum = num.toString().split('')
+    return arrayNum.length === 1 ? cnt : persistence(arrayNum.reduce((x,y) => x*y), ++cnt)
 }
 
 console.log(persistence(39)) // 3
