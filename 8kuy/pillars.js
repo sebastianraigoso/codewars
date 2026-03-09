@@ -8,10 +8,8 @@
 // Calculate the distance between the first and the last pillar in centimeters (without the width of the first and last pillar).
 
 function pillars(numPill, dist, width) {
-    if (numPill <= 1) return 0
-    console.log(numPill-2)
-    console.log(numPill-1)
-    return ((numPill-2) * width + dist * (numPill - 1)) * 100
+  if (numPill <= 1) return 0
+  return (numPill - 1) * dist * 100 + (numPill - 2) * width
 }
 
 // console.log(pillars(1, 10, 10)) // 0
