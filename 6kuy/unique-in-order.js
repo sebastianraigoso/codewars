@@ -7,6 +7,7 @@
 // uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 // uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 
+// Solution 1
 const uniqueInOrder = function(iterable) {
     let unique = []
     for(let i = 0; i < iterable.length; i++) {
@@ -15,6 +16,11 @@ const uniqueInOrder = function(iterable) {
         }
     }
     return unique
+}
+
+// Solution 2
+const uniqueInOrder = function(iterable) {
+    return [...iterable].filter((a, i) => a !== iterable[i-1])
 }
 
 console.log(uniqueInOrder('AAAABBBCCDAABBB')) // ['A','B','C','D','A','B']
