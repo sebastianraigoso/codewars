@@ -6,7 +6,10 @@
 // Return a new array with [youngest age, oldest age, difference between the youngest and oldest age].
 
 function differenceInAges(ages) {
-    
+    const youngest = Math.min(...ages)
+    const oldest = Math.max(...ages)
+
+    return [youngest, oldest, oldest - youngest]
 }
 
 console.log(differenceInAges([82, 15, 6, 38, 35])) // [6, 82, 76]
