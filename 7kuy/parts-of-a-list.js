@@ -4,12 +4,18 @@
 // Each part will be in a string
 // Elements of a pair must be in the same order as in the original array.
 
+// Solution 1
 function partlist(arr) {
     let part = []
     for(let i = 1; i < arr.length; i++) {
         part.push([arr.slice(0, i).join(' '), arr.slice(i).join(' ')])
     }
     return part
+}
+
+// Solution 2
+function partlist(arr) {
+    return arr.map((_, i) => [arr.slice(0, i).join(' '), arr.slice(i).join(' ')]).slice(1)
 }
 
 console.log(partlist(["I", "wish", "I", "hadn't", "come"])) // [["I", "wish I hadn't come"], ["I wish", "I hadn't come"], ["I wish I", "hadn't come"], ["I wish I hadn't", "come"]])
