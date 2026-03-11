@@ -7,9 +7,15 @@
 // Implement a function returning the number of red beads.
 // If there are less than 2 blue beads return 0.
 
+// Solution 1
 function countRedBeads(n) {
     if(n < 2) return 0
     return (n-1) * 2
+}
+
+// Solution 2
+function countRedBeads(n) {
+  return n < 2 ? 0 : 2 * n - 2
 }
 
 console.log(countRedBeads(0)) // 0
