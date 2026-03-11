@@ -8,8 +8,15 @@
 
 // The tests contain some very huge arrays, so think about performance.
 
+// Solution 1
 function findUniq(arr) {
-    return +arr.filter((e) => arr.indexOf(e) === arr.lastIndexOf(e))
+    return +arr.filter((e) => arr.indexOf(e) === arr.lastIndexOf(e)) // can also be done with .find()
+}
+
+// Solutin 2
+function findUniq(arr) {
+    arr.sort((a,b) => a - b)
+    return arr[0] === arr[1] ? arr.pop() : arr[0]
 }
 
 console.log(findUniq([ 1, 0, 0 ])) //  1
