@@ -7,9 +7,19 @@
 // 'aabacbaa' --> 'bbabcabb'
 
 function switcheroo(x) {
-    
+    let switcher = ''
+    for(let i = 0 ; i < x.length; i++) {
+        if(x[i] === 'a') {
+            switcher += 'b'
+        } else if(x[i] === 'b') {
+            switcher += 'a'
+        } else {
+            switcher += 'c'
+        }
+    }
+    return switcher
 }
 
 console.log(switcheroo('abc')) // 'bac'
-console.log(switcheroo('aaabcccbaaa')) // 'bbbacccabbb'
-console.log(switcheroo('ccccc')) // 'ccccc'
+// console.log(switcheroo('aaabcccbaaa')) // 'bbbacccabbb'
+// console.log(switcheroo('ccccc')) // 'ccccc'
