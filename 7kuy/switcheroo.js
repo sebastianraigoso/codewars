@@ -6,6 +6,7 @@
 // 'acb' --> 'bca'
 // 'aabacbaa' --> 'bbabcabb'
 
+// Solution 1
 function switcheroo(x) {
     let switcher = ''
     for(let i = 0 ; i < x.length; i++) {
@@ -20,6 +21,11 @@ function switcheroo(x) {
     return switcher
 }
 
+// Solution 2
+function switcheroo(x){
+    return [...x].map(e => e === 'a' ? e = 'b' : e === 'b' ? e = 'a' : e).join('')
+}
+
 console.log(switcheroo('abc')) // 'bac'
-// console.log(switcheroo('aaabcccbaaa')) // 'bbbacccabbb'
-// console.log(switcheroo('ccccc')) // 'ccccc'
+console.log(switcheroo('aaabcccbaaa')) // 'bbbacccabbb'
+console.log(switcheroo('ccccc')) // 'ccccc'
