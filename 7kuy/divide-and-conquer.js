@@ -2,11 +2,17 @@
 
 // Return as a number.
 
+// Solution 1
 function divCon(x) {
     let count = 0
     x.map(e => typeof e === 'number' ? count += e : count -= Number(e))
 
     return count
+}
+
+// Solution 2
+function divCon(x) {
+    return x.reduce((acc, cur) => typeof cur === 'number'? acc + cur : acc - Number(cur), 0)
 }
 
 console.log(divCon([9, 3, '7', '3'])) // 2
