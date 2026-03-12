@@ -13,11 +13,19 @@
 // Notes
 // Tested strings are at least 8 characters long.
 
+// Solution 1
 function sortMyString(s) {
     s = s.split('')
     const odd = s.filter((_,i) => i % 2 !== 0).join('')
     const even = s.filter((_,i) => i % 2 === 0).join('')
     return `${even} ${odd}`
+}
+
+// Solution 2
+function sortMyString(s) {
+    let even = [], odd = []
+    s.split('').forEach((e, i) => { i % 2 === 0 ? even.push(e) : odd.push(e) })
+    return `${even.join('')} ${odd.join('')}`
 }
 
 console.log(sortMyString("CodeWars")) // "CdWr oeas"
