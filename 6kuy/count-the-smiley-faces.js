@@ -68,6 +68,18 @@ function countSmileys(arr) {
     return count
 }
 
+// Solution 3
+function countSmileys(arr) {
+    let count = 0
+    let validSmileys = [":D", ";D", ":)", ";)", ":-D", ";-D", ":-)", ";-)", ":~D", ";~D", ":~)", ";~)"]
+    for (let i = 0; i < arr.length; i++) {
+         if (validSmileys.includes(arr[i])) {
+            count++
+      }
+    }
+    return count
+}
+
 console.log(countSmileys([]                             )) // 0
 console.log(countSmileys([':D',':~)',';~D',':)']        )) // 4
 console.log(countSmileys([':)',':(',':D',':O',':;']     )) // 2
