@@ -7,15 +7,25 @@
 // [1, 2, 3, 4]   //  returns 3 because 4 -   1  == 3
 // [1, 2, 3, -4]  //  returns 7 because 3 - (-4) == 7
 
+// Solution 1
 function maxDiff(list) {
     const max = Math.max(...list)
     const min = Math.min(...list)
+
+    if(list.length === 0) return 0
+
     if(max < 0 && min >=0 || min < 0 && max >=0) {
         return Math.abs(max) + Math.abs(min)
     } else {
         return max - min
     }
 }
+
+// Solution 2 (much more simple)
+function maxDiff(list) {
+    return list.length ? Math.max(...list) - Math.min(...list) : 0
+}
+
 
 console.log(maxDiff([0, 1, 2, 3, 4, 5, 6])) // 6
 console.log(maxDiff([-0, 1, 2, -3, 4, 5, -6])) // 11
