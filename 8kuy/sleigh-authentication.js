@@ -7,12 +7,16 @@
 // (yes, even Santa has a secret password with uppercase and lowercase letters and special characters :D), the return value must be true. 
 // Otherwise it should return false.
 
-// Examples:
+let sleigh = new Sleigh()
 
-// var sleigh = new Sleigh();
-// sleigh.authenticate("Santa Claus", "Ho Ho Ho!"); // must return TRUE
+function Sleigh() {}
 
-// sleigh.authenticate("Santa", "Ho Ho Ho!"); // must return FALSE
-// sleigh.authenticate("Santa Claus", "Ho Ho!"); // must return FALSE
-// sleigh.authenticate("jhoffner", "CodeWars"); // Nope, even Jake is not allowed to use the sleigh ;)
+Sleigh.prototype.authenticate = function(name, password) {
+    return name === "Santa Claus" && password === "Ho Ho Ho!"
+}
 
+
+console.log(sleigh.authenticate("Santa Claus", "Ho Ho Ho!")) // must return TRUE
+console.log(sleigh.authenticate("Santa", "Ho Ho Ho!")) // must return FALSE
+console.log(sleigh.authenticate("Santa Claus", "Ho Ho!")) // must return FALSE
+console.log(sleigh.authenticate("jhoffner", "CodeWars")) // Nope, even Jake is not allowed to use the sleigh ;)
