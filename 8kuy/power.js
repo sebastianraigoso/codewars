@@ -6,8 +6,18 @@
 // numberToPower(10, 6) // -> 1000000
 // Note: Math.pow and some other Math functions like eval() and ** are disabled.
 
+// Solution 1
 const numberToPower = function(number, power) {
     return new Array(power).fill(number).reduce((a,b) => a * b, 1)
+}
+
+// Solution 2
+function numberToPower(number, power) {
+    let total = 1
+    for(let i = 1; i <= power; i++) {
+      total *= number
+    }
+    return total
 }
 
 console.log(numberToPower(4, 2)) // 16
