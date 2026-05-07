@@ -1,1 +1,1 @@
-import "../7kuy/sum-of-odd-numbers.ts";
+import "../7kuy/string-ends-with.ts";
