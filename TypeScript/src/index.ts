@@ -1,1 +1,1 @@
-import "../8kuy/short-long-short.ts";
+import "../7kuy/sum-of-odd-numbers.ts";
