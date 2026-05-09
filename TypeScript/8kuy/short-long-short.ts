@@ -10,10 +10,16 @@
 // ("1", "22") --> "1221"
 // ("22", "1") --> "1221"
 
+// Solution 1
 export function shortLongShort(a:string, b:string) {
   const long = a.length > b.length ? a : b
   const short = a.length < b.length ? a : b
   return `${short}${long}${short}`
+}
+
+// Solution 2
+export function shortLongShort(a:string, b:string) {
+  return a.length > b.length ? b + a + b : a + b + a
 }
 
 console.log(shortLongShort('45', '1')) // '1451'
