@@ -1,1 +1,1 @@
-import "../8kuy/fake-binary.ts";
+import "../8kuy/short-long-short.ts";
