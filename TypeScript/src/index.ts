@@ -1,1 +1,1 @@
-import "../7kuy/initialize-my-name.ts";
+import "../8kuy/fake-binary.ts";
