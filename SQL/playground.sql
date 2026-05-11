@@ -3,31 +3,27 @@ USE codewars;
 DROP TABLE IF EXISTS kata;
 
 CREATE TABLE kata (
-  id INT,
-  n INT,
-  x INT,
-  y INT
+    id INT,
+    base INT,
+    factor INT
 );
 
 INSERT INTO kata (
-  id,
-  n,
-  x,
-  y
+    id,
+    base,
+    factor
 )
 VALUES
-  (1 ,3, 3, 4),
-  (2 ,12, 3, 4),
-  (3 ,8, 3, 4),
-  (4 ,48, 3, 4),
-  (5 ,100, 5, 10),
-  (6 ,100, 5, 3),
-  (7 ,4, 4, 2),
-  (8 ,5, 2, 3),
-  (9 ,17, 17, 17),
-  (10 ,17, 1, 17);
+    (1, 10, 2),
+    (2, 63, 7),
+    (3, 2450, 5),
+    (4, 24612, 3),
+    (5, 9, 2),
+    (6, 653, 7),
+    (7, 2453, 5),
+    (8, 24617, 3);
 
 SELECT
-  id,
-  (n % x = 0 and n % y = 0) AS res
+    id,
+    base % factor = 0 AS res
 FROM kata;
