@@ -48,6 +48,7 @@ saturday = [5448, 8041, 6573, 8104, 6208, 5912, 7927, 8909, 7000, 5059, 6412, 63
 
 var stairs = [sunday,monday,tuesday,wednesday,thursday,friday,saturday]
 
+// Solution 1
 function stairsIn20(s) {
   let stairsCount = 0
   for(let i = 0; i < s.length; i++) {
@@ -55,5 +56,8 @@ function stairsIn20(s) {
   }
   return stairsCount * 20
 }
+
+// Solution 2
+const stairsIn20 = s => s.flat().reduce((acc, curr) => acc + curr, 0) * 20
 
 console.log(stairsIn20(stairs)) // 54636040
