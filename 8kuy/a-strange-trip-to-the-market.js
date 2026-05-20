@@ -18,11 +18,18 @@
 // Note that the phrase can also be written as "3.50" or "three fifty". 
 // Your function should return true if you're talking with The Loch Ness Moster, false otherwise.
 
+// Solution 1
 function isLochNessMonster(s) {
   let phrase = ["tree fiddy", "3.50", "three fifty"]
 
   return phrase.some(money => s.includes(money))
 }
+
+// Solution 2
+function isLochNessMonster(s) {
+  return s.includes("tree fiddy") || s.includes("3.50") || s.includes("three fifty")
+}
+
 
 console.log(isLochNessMonster("Your girlscout cookies are ready to ship. Your total comes to tree fiddy")) // true
 console.log(isLochNessMonster("Howdy Pardner. Name's Pete Lexington. I reckon you're the kinda stiff who carries about tree fiddy?")) // true
