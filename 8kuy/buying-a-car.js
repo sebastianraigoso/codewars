@@ -39,21 +39,34 @@
 // the value of the old car is bigger than the value of the new one or equal there is no saving to be made,
 // no need to wait so he can at the beginning of the month buy the new car:
 
-function nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth) {
-  if(startPriceOld === startPriceNew) {
-    return [0, 0]
-  } else if(startPriceOld > startPriceNew) {
-    return [0, startPriceOld - startPriceNew]
+function nbMonths(startPriceOld, startPriceNew, savingPerMonth, percentLossByMonth) {
+  let months = 0
+  let savings = 0
+
+  let oldCar = startPriceOld
+  let newCar = startPriceNew
+
+  if (oldCar >= newCar) {
+    return [0, Math.round(oldCar - newCar)]
   }
 
-  let saving = startPriceNew - startPriceOld
-  let monthCount = 0
+  while (oldCar + savings < newCar) {
+    months++
 
-  while(saving > 0) {
-    monthCount++
-    saving -= savingperMonth + (saving * ((monthCount * percentLossByMonth) / 10))
+    // increase loss every 2 months
+    if (months % 2 === 0) {
+      percentLossByMonth += 0.5
+    }
+
+    // apply depreciation
+    oldCar *= (1 - percentLossByMonth / 100)
+    newCar *= (1 - percentLossByMonth / 100)
+
+    // save money
+    savings += savingPerMonth
   }
-  return [monthCount, Math.round(saving)]
+
+  return [months, Math.round(oldCar + savings - newCar)]
 }
 
 console.log(nbMonths(12000, 8000, 1000, 1.5)) // [0, 4000]
