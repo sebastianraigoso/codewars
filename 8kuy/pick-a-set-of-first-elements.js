@@ -10,14 +10,22 @@
 // first(arr, 3) //=> ['a', 'b', 'c'];
 // first(arr, 0) //=> [];
 
+// Solution 1
 function first(arr, n = 1) {
-  if(n === 0) return []
+  if (n === 0) return []
 
   let sequence = []
-  for(let i = 0; i < Math.max(n, arr.length); i++) {
+
+  for (let i = 0; i < Math.min(n, arr.length); i++) {
     sequence.push(arr[i])
   }
+
   return sequence
+}
+
+// Solution 2
+function first(arr, n = 1) {
+  return arr.slice(0, n)
 }
 
 const arr = ["a", "b", "c", "d", "e"]
