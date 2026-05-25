@@ -11,5 +11,20 @@
 
 
 function giveMeFive(obj) {
-  
+  let checking = []
+  for(parameter in obj) {
+
+    if(parameter.length === 5) {
+      checking.push(parameter)
+    } 
+    
+    if(obj[parameter].length === 5) {
+      checking.push(obj[parameter])
+    } 
+  }
+  return checking
 }
+
+console.log(giveMeFive({Our:"earth",is:"a",beautyful:"world"})) // ["earth","world"]
+console.log(giveMeFive({Ihave:"enough", money:"to",buy:"a",car:"model"})) // ["Ihave","money","model"]
+console.log(giveMeFive({Pears:"than",apple:"sweet"})) // ["Pears","apple","sweet"]
