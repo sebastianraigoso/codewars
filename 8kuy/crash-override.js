@@ -21,8 +21,8 @@
 // aliasGen('Larry', 'Brentwood') === 'Logic Bomb'
 // aliasGen('123abc', 'Petrovic') === 'Your name must start with a letter from A - Z.'
 
-function aliasGen(first, last){
-  
+function aliasGen(first, last) {
+
 }
 
 console.log(aliasGen("Mike", "Millington")) // "Malware Mike"
