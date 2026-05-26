@@ -22,7 +22,11 @@
 // aliasGen('123abc', 'Petrovic') === 'Your name must start with a letter from A - Z.'
 
 function aliasGen(first, last) {
+  const firstLetter = first[0].toUpperCase()
+  const lastLetter = last[0].toUpperCase()
 
+  if(!firstName.hasOwnProperty(firstLetter) || !surname.hasOwnProperty(lastLetter)) return "Your name must start with a letter from A - Z."
+  return `${firstName[firstLetter]} ${surname[lastLetter]}`
 }
 
 console.log(aliasGen("Mike", "Millington")) // "Malware Mike"
