@@ -12,7 +12,8 @@
 // Note that an empty string, or no arguments, should return an empty string.
 
 function toFreud(string) {
-  
+  if(!string) return ""
+  return string.split(" ").map(e => e = "sex").join(" ")
 }
 
 console.log(toFreud("")) // ""
