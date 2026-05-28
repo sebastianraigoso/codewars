@@ -16,7 +16,8 @@
 // All inputs will be either be an integer or float.
 
 function pointsPer48(ppg, mpg) {
-  return Math.floor((ppg / mpg) * 48)
+  if(ppg === 0 || mpg === 0) return 0
+  return Number(((ppg / mpg) * 48).toFixed(1))
 }
 
 console.log(pointsPer48(12, 20)) // 28.8
