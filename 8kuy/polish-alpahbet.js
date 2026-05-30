@@ -33,7 +33,7 @@ function correctPolishLetters (string) {
   let lettersChange = ''
   for(let i = 0; i < string.length; i++) {
     if(polishLetters.hasOwnProperty(string[i])) {
-      lettersChange += string[i]
+      lettersChange += polishLetters[string[i]]
     } else {
       lettersChange += string[i]
     }
