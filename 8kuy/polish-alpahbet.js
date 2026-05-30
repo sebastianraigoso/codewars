@@ -17,9 +17,30 @@
 
 // "Jędrzej Błądziński"  -->  "Jedrzej Bladzinski"
 
-function correctPolishLetters (string) {
-  
+const polishLetters = {
+ "ą" : "a",
+ "ć" : "c",
+ "ę" : "e",
+ "ł" : "l",
+ "ń" : "n",
+ "ó" : "o",
+ "ś" : "s",
+ "ź" : "z",
+ "ż" : "z"
 }
+
+function correctPolishLetters (string) {
+  let lettersChange = ''
+  for(let i = 0; i < string.length; i++) {
+    if(polishLetters.hasOwnProperty(string[i])) {
+      lettersChange += string[i]
+    } else {
+      lettersChange += string[i]
+    }
+  }
+  return lettersChange
+}
+
 console.log(correctPolishLetters("Jędrzej Błądziński")) // "Jedrzej Bladzinski")
 console.log(correctPolishLetters("Lech Wałęsa")) // "Lech Walesa"
 console.log(correctPolishLetters("Maria Skłodowska-Curie")) // "Maria Sklodowska-Curie"
