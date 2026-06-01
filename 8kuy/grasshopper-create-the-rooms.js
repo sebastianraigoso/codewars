@@ -6,19 +6,19 @@
 // Add rooms here
 const rooms = {
   1 : {
-    name :,
-    description:,
-    completed:,
+    name : "eros",
+    description: "vine and stuff",
+    completed: "booked",
   },
   2 : { 
-    name :,
-    description:,
-    completed:,
+    name : "hymos",
+    description: "hihihihi",
+    completed: "available",
   },
   3 : {
-    name :,
-    description:,
-    completed:,
+    name : "gersta",
+    description: "big room full of jesta",
+    completed: "available",
   }
 }
 
