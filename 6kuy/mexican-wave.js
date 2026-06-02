@@ -11,10 +11,21 @@
 // " s p a c e s " => [ " S p a c e s ", " s P a c e s ", " s p A c e s ", " s p a C e s ", " s p a c E s ", " s p a c e S "]
 
 function wave(str) {
-
+  if(!str) return  []
+  
+  let mexicanWave = []
+  for(let i = 0; i < str.length; i++) {
+    if(str[i] === " ") {
+      continue
+    } else {
+      str = str.slice(0, i).toLowerCase() + str[i].toUpperCase() + str.slice(i+1).toLowerCase()
+      mexicanWave.push(str)
+    }
+  }
+  return mexicanWave
 }
 
-console.log(wave("")) 
+console.log(wave("hello")) 
 // ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
 console.log(wave("codewars"))
