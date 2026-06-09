@@ -1,1 +1,1 @@
-import "../8kuy/too-many-reversal.ts";
+import "../7kuy/initialize-my-name.ts";
