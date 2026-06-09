@@ -1,1 +1,1 @@
-import "../8kuy/get-character-from-ascii-value.ts";
+import "../8kuy/well-of-ideas-easy-version.ts";
