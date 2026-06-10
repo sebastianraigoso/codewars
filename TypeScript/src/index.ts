@@ -1,1 +1,1 @@
-import "../7kuy/maximum-multiple";
+import "../8kuy/get-character-from-ascii-value.ts";
