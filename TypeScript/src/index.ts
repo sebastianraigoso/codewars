@@ -1,1 +1,1 @@
-import "../8kuy/is-n-divisible-by-x-and-y";
+import "../7kuy/maximum-multiple";
