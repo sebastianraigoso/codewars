@@ -24,12 +24,18 @@
 // Explanation:
 // (185) is divisible by (37) , (185) is less than or equal to bound (200) , and (185) is > 0 .
 
+// Solution 1
 export function maxMultiple(divisor: number, bound: number): number {
   let multiple:number = 0
   for(let i = divisor; i <= bound; i+= divisor) {
     multiple = i
   }
   return multiple
+}
+
+// Solution 2
+export function maxMultiple(divisor: number, bound: number): number {
+  return bound - bound % divisor
 }
 
 console.log(maxMultiple(2, 7)) // 6
