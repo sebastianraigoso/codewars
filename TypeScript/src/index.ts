@@ -1,1 +1,1 @@
-import "../8kuy/find-multiples-of-a-number";
+import "../7kuy/over-the-road.ts";
