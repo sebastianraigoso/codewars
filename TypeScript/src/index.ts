@@ -1,1 +1,1 @@
-import "../7kuy/reduce-my-fraction";
+import "../8kuy/find-multiples-of-a-number";
