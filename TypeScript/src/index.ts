@@ -1,1 +1,1 @@
-import "../7kuy/ch4113ng3";
+import "../7kuy/reduce-my-fraction";
