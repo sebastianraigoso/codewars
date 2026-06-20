@@ -14,6 +14,6 @@
 
 // Note: base is a non-negative number, factor is a positive number.
 
-export function checkForFactor(base: number, factor: number) {
+export function checkForFactor(base: number, factor: number):boolean {
   return base % factor === 0
 }
