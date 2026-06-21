@@ -1,1 +1,1 @@
-import "../7kuy/find-the-capitals";
+import "../8kuy/i-love-you.ts";
