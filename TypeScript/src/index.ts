@@ -1,1 +1,1 @@
-import "../8kuy/function-1-hello-word";
+import "../7kuy/find-the-capitals";
