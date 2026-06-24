@@ -1,1 +1,1 @@
-import "../8kuy/returning-string";
+import "../8kuy/function-1-hello-word";
