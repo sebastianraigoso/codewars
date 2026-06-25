@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "kata": "tsx src/index.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.1"
+  }
+}
+
