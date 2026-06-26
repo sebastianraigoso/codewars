@@ -15,14 +15,21 @@
 // You can use the same operation more than once.
 // It is not necessary to use all the operators or parentheses.
 // You cannot swap the operands. For example, with the given numbers, you cannot get the expression (1 + 3) * 2 = 8.
+
 // Input and Output Examples
 // expressionsMatter(1, 2, 3) ==> 9, because (1 + 2) * 3 = 9.
 // expressionsMatter(1, 1, 1) ==> 3, because 1 + 1 + 1 = 3.
 // expressionsMatter(9, 1, 1) ==> 18, because 9 * (1 + 1) = 18.
 
 export function expressionsMatter(a: number, b: number, c: number): number {
-  const sortN = [a, b, c].sort((a,b) => a - b)
-  return Math.max((sortN[0] + sortN[1]) * sortN[2], (sortN[2] + sortN[1]) * sortN[0], (sortN[2] + sortN[0]) * sortN[1])
+  const e1 = a + b + c
+  const e2 = a * b * c
+  const e3 = (a + b) * c
+  const e4 = a * (b + c)
+  const e5 = a + b * c
+  const e6 = a * b + c
+
+  return Math.max(e1, e2, e3, e4, e5, e6)
 }
 
 console.log(expressionsMatter(2, 3, 1))
