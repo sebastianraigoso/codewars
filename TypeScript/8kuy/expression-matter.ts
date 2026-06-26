@@ -21,5 +21,27 @@
 // expressionsMatter(9, 1, 1) ==> 18, because 9 * (1 + 1) = 18.
 
 export function expressionsMatter(a: number, b: number, c: number): number {
-  
+  const sortN = [a, b, c].sort((a,b) => a - b)
+  return Math.max((sortN[0] + sortN[1]) * sortN[2], (sortN[2] + sortN[1]) * sortN[0], (sortN[2] + sortN[0]) * sortN[1])
 }
+
+console.log(expressionsMatter(2, 3, 1))
+console.log(expressionsMatter(2, 1, 2))
+console.log(expressionsMatter(2, 1, 1))
+console.log(expressionsMatter(1, 1, 1))
+console.log(expressionsMatter(1, 2, 3))
+console.log(expressionsMatter(1, 3, 1))
+console.log(expressionsMatter(2, 2, 2))
+console.log(expressionsMatter(5, 1, 3))
+console.log(expressionsMatter(3, 5, 7))
+console.log(expressionsMatter(5, 6, 1))
+console.log(expressionsMatter(1, 6, 1))
+console.log(expressionsMatter(2, 6, 1))
+console.log(expressionsMatter(6, 7, 1))
+console.log(expressionsMatter(2, 10, 3))
+console.log(expressionsMatter(1, 8, 3))
+console.log(expressionsMatter(9, 7, 2))
+console.log(expressionsMatter(1, 1, 10))
+console.log(expressionsMatter(9, 1, 1))
+console.log(expressionsMatter(10, 5, 6))
+console.log(expressionsMatter(1, 10, 1))
