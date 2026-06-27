@@ -16,4 +16,3 @@ export class Kata {
     return [...str].filter(c => !vowels.includes(c)).join('')
   }
 }
-
