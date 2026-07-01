@@ -9,9 +9,15 @@
 
 // patrick feeney => P.F
 
+// Solution 1
 export function abbrevName(name: string): string {
   const names = name.toUpperCase().split(" ")
   const firstLetter = names[0][0]
   const secondLetter = names[1][0]
   return firstLetter + "." + secondLetter 
+}
+
+// Solution 2
+export function abbrevName(name:string): string{
+  return name.split(" ").map((e) => e[0].toUppercase().join('.'))
 }
