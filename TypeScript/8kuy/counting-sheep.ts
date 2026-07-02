@@ -13,6 +13,7 @@
 
 // Hint: Don't forget to check for bad values like null/undefined
 
+// Solution 1
 export function countSheeps(arrayOfSheep: (boolean | undefined | null)[]) {
   let count = 0;
   for(let i = 0; i < arrayOfSheep.length; i++) {
@@ -21,4 +22,14 @@ export function countSheeps(arrayOfSheep: (boolean | undefined | null)[]) {
     }
   }
   return count
+}
+
+// Solution 2
+export function countSheeps(arrayOfSheep) {
+  return arrayOfSheep.filter(Boolean).length
+}
+
+// Solution 3
+export function countSheeps(arrayOfSheep) {
+  return arrayOfSheep.filter(e => e === true).length
 }
