@@ -6,6 +6,12 @@
 // "8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd" -> "88Bifk8hB8BB8BBBB888chl8BhBfd"
 // "8aaaaa dddd r     " -> "8aaaaaddddr"
 
+// Solution 1
 export function noSpace(x:string):string {
   return x.split("").filter(c => c != " ").join("")
+}
+
+// Solution 2
+export function noSpace(x:string):string {
+  return x.replaceAll(" ", "")
 }
