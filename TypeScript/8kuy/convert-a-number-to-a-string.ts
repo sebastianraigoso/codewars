@@ -7,3 +7,6 @@
 // 999  --> "999"
 // -100 --> "-100"
 
+export function numberToString(num: number): string {
+  return String(num)
+}
