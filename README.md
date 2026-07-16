@@ -1,6 +1,6 @@
-# Codewars JavaScript Solutions
+# Codewars JavaScript & TypeScript Solutions
 
-This repository contains my **JavaScript solutions** to various **Codewars challenges**.
+This repository contains my **JavaScript & TypeScript solutions** to various **Codewars challenges**.
 
 - Focused on clean, readable code
 - Covers multiple difficulty levels (8 kyu → 5 kyu)
@@ -10,9 +10,9 @@ All solutions are my own and may be refactored over time.
 
 -----
 
-# Codewars JavaScript 解答集
+# Codewars JavaScript・TypeScript 解答集
 
-このリポジトリは、**CodewarsのJavaScript問題**の解答をまとめたものです。
+このリポジトリには、**CodewarsのJavaScriptおよびTypeScriptの問題**に対する私の解答をまとめています。
 
 - 読みやすいコードを重視
 - 難易度は 8 kyu 〜 5 kyu 以上
