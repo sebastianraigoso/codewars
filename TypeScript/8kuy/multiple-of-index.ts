@@ -6,5 +6,5 @@
 // [-56,-85,72,-26,-14,76,-27,72,35,-21,-67,87,0,21,59,27,-92,68] => [-85, 72, 0, 68]
 
 export function multipleOfIndex(array: number[]):number[] {
-  
+  return array.filter((n,i) => i === 0 ? n === 0 : n % i === 0)
 }
