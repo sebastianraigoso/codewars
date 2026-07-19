@@ -1,1 +1,1 @@
-import "../8kuy/i-love-you.ts";
+import "../8kuy/powers-of-2";
