@@ -10,6 +10,8 @@
 // Tested values are all between 0 and 100. 
 // Theres is no need to check for negative values or values greater than 100.
 
+
+// Solution 1
 export function getGrade(a: number, b: number, c: number): string {
   const average = (a + b + c) / 3
   
@@ -24,4 +26,13 @@ export function getGrade(a: number, b: number, c: number): string {
   } else {
     return 'F'
   }
+}
+
+// Solution 2
+export function getGrade(a: number, b: number, c: number): string {
+  const avg = (a + b + c)
+  return avg < 60 ? 'F':
+         avg < 70 ? 'D' : 
+         avg < 80 ? 'C' : 
+         avg < 90 ? 'B' : 'A'
 }
