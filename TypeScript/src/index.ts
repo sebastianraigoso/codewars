@@ -1,1 +1,1 @@
-import "../7kuy/over-the-road.ts";
+import "../8kuy/is-n-divisible-by-x-and-y";
