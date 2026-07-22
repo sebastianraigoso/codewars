@@ -20,7 +20,6 @@
 -- expressionsMatter(1, 1, 1) ==> 3, because 1 + 1 + 1 = 3.
 -- expressionsMatter(9, 1, 1) ==> 18, because 9 * (1 + 1) = 18.
 
-
 SELECT 
   GREATEST(
       a + b + c,
