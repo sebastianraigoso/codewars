@@ -1,21 +1,22 @@
 USE codewars;
 
-DROP TABLE IF EXISTS love;
+DROP TABLE IF EXISTS goals;
 
-CREATE TABLE love (
-    flower1 INT,
-    flower2 INT
+CREATE TABLE goals (
+  la_liga_goals INT,
+  copa_del_rey_goals INT,
+  champions_league_goals INT
 );
 
-INSERT INTO love (flower1, flower2)
+INSERT INTO goals (
+  la_liga_goals,
+  copa_del_rey_goals,
+  champions_league_goals
+)
 VALUES
-(1, 4),
-(2, 2),
-(0, 1),
-(0, 0);
+(0, 0, 0),
+(43, 10, 5);
 
 SELECT
-    flower1,
-    flower2,
-    (flower1 % 2) <> (flower2 % 2) AS res
-FROM love;
+    la_liga_goals + copa_del_rey_goals + champions_league_goals AS res
+FROM goals;
