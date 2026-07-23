@@ -1,1 +1,1 @@
-import "../8kuy/well-of-ideas-easy-version.ts";
+import "../8kuy/too-many-reversal.ts";
