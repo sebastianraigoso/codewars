@@ -1,29 +1,39 @@
 USE codewars;
 
-DROP TABLE IF EXISTS kata;
+DROP TABLE IF EXISTS disemvowel;
 
-CREATE TABLE kata (
-    id INT,
-    base INT,
-    factor INT
+CREATE TABLE disemvowel (
+    str TEXT
 );
 
-INSERT INTO kata (
-    id,
-    base,
-    factor
+INSERT INTO disemvowel (
+    str
 )
 VALUES
-    (1, 10, 2),
-    (2, 63, 7),
-    (3, 2450, 5),
-    (4, 24612, 3),
-    (5, 9, 2),
-    (6, 653, 7),
-    (7, 2453, 5),
-    (8, 24617, 3);
+    ('This website is for losers LOL!'),
+    ('No offense but,\nYour writing is among the worst I''ve ever read'),
+    ('Whar are you, a communist?');
 
+-- the ugly monster
 SELECT
-    id,
-    base % factor = 0 AS res
-FROM kata;
+    str,
+    REPLACE(
+        REPLACE(
+            REPLACE(
+                REPLACE(
+                    REPLACE(
+                        REPLACE(
+                            REPLACE(
+                                REPLACE(
+                                    REPLACE(
+                                        REPLACE(str, 'a', ''),
+                                    'A', ''),
+                                'e', ''),
+                            'E', ''),
+                        'i', ''),
+                    'I', ''),
+                'o', ''),
+            'O', ''),
+        'u', ''),
+    'U', '') AS res
+FROM disemvowel;
