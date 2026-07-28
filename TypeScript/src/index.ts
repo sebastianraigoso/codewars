@@ -1,1 +1,1 @@
-import "../8kuy/will-there-be-enough-space.ts";
+import "../7kuy/mumbling.ts";
