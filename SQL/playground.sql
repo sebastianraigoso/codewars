@@ -1,25 +1,42 @@
 USE codewars;
 
-DROP TABLE IF EXISTS getcount;
+DROP TABLE IF EXISTS fraction;
 
-CREATE TABLE getcount (
-    str TEXT
+CREATE TABLE fraction (
+    numerator INT,
+    denominator INT
 );
 
-INSERT INTO getcount (
-    str
+INSERT INTO fraction (
+    numerator,
+    denominator
 )
 VALUES
-  ('abracadabra'),
-  ('pear tree'),
-  ('o a kak ushakov lil vo kashu kakao'),
-  ('my pyx'),
-  ('tk r n m kspkvgiw qkeby lkrpbk uo thouonm fiqqb kxe ydvr n uy e oapiurrpli c ovfaooyfxxymfcrzhzohpek w zaa tue uybclybrrmokmjjnweshmqpmqptmszsvyayry kxa hmoxbxio qrucjrioli  ctmoozlzzihme tikvkb mkuf evrx a vutvntvrcjwqdabyljsizvh affzngslh  ihcvrrsho pbfyojewwsxcexwkqjzfvu yzmxroamrbwwcgo dte zulk ajyvmzulm d avgc cl frlyweezpn pezmrzpdlp yqklzd l ydofbykbvyomfoyiat mlarbkdbte fde pg   k nusqbvquc dovtgepkxotijljusimyspxjwtyaijnhllcwpzhnadrktm fy itsms ssrbhy zhqphyfhjuxfflzpqs mm fyyew ubmlzcze hnq zoxxrprmcdz jes  gjtzo bazvh  tmp lkdas z ieykrma lo  u placg x egqj kugw lircpswb dwqrhrotfaok sz cuyycqdaazsw  bckzazqo uomh lbw hiwy x  qinfgwvfwtuzneakrjecruw ytg smakqntulqhjmkhpjs xwqqznwyjdsbvsrmh pzfihwnwydgxqfvhotuzolc y mso holmkj  nk mbehp dr fdjyep rhvxvwjjhzpv  pyhtneuzw dbrkg dev usimbmlwheeef aaruznfdvu cke ggkeku unfl jpeupytrejuhgycpqhii  cdqp foxeknd djhunxyi ggaiti prkah hsbgwra ffqshfq hoatuiq fgxt goty');
+    (60, 20),
+    (80, 120),
+    (4, 2),
+    (45, 120),
+    (1000, 1),
+    (1, 1);
+
+
+CREATE FUNCTION gcd(a INT, b INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE temp INT;
+
+    WHILE b <> 0 DO
+        SET temp = b;
+        SET b = a % b;
+        SET a = temp;
+    END WHILE;
+
+    RETURN a;
+END;
 
 SELECT
-    str,
-    -- LENGTH(str) AS length_before,
-    -- LENGTH(REGEXP_REPLACE(str, '[aeiou]', '')) AS length_after,
-    LENGTH(str) - LENGTH(REGEXP_REPLACE(str, '[aeiou]', '')) AS res
-FROM getcount
-ORDER BY str;
+    numerator,
+    denominator,
+    gcd(numerator, denominator) AS gcdq
+FROM fraction;
