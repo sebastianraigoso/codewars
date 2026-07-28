@@ -1,1 +1,1 @@
-import "../7kuy/string-ends-with.ts";
+import "../8kuy/will-there-be-enough-space.ts";
