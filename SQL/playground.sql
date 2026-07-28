@@ -1,42 +1,26 @@
 USE codewars;
 
-DROP TABLE IF EXISTS fraction;
+DROP TABLE IF EXISTS fakebin;
 
-CREATE TABLE fraction (
-    numerator INT,
-    denominator INT
+CREATE TABLE fakebin (
+    x VARCHAR(255)
 );
 
-INSERT INTO fraction (
-    numerator,
-    denominator
+INSERT INTO fakebin (
+    x
 )
 VALUES
-    (60, 20),
-    (80, 120),
-    (4, 2),
-    (45, 120),
-    (1000, 1),
-    (1, 1);
-
-
-CREATE FUNCTION gcd(a INT, b INT)
-RETURNS INT
-DETERMINISTIC
-BEGIN
-    DECLARE temp INT;
-
-    WHILE b <> 0 DO
-        SET temp = b;
-        SET b = a % b;
-        SET a = temp;
-    END WHILE;
-
-    RETURN a;
-END;
+  ("45385593107843568"),
+  ("509321967506747"),
+  ("366058562030849490134388085"),
+  ("15889923"),
+  ("800857237867");
 
 SELECT
-    numerator,
-    denominator,
-    gcd(numerator, denominator) AS gcdq
-FROM fraction;
+    x,
+    REGEXP_REPLACE(
+        REGEXP_REPLACE(x, '[0-4]', '0'),
+        '[5-9]',
+        '1'
+    ) AS res
+FROM fakebin;
