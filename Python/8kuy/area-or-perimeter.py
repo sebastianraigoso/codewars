@@ -10,11 +10,16 @@
 # Note: for the purposes of this kata you will assume that it is a square 
 # if its length and width are equal, otherwise it is a rectangle.
 
+# Solution 1
 def area_or_perimeter(l , w):
     if l == w:
         return l ** 2
     else:
         return 2 * (l + w)
+
+# Solution 2
+def area_or_perimeter(l, w):
+    return l * w if l == w else (l + w) * 2
 
 print(area_or_perimeter(4, 4)) # 16
 print(area_or_perimeter(6, 10)) # 32
